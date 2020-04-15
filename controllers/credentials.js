@@ -12,14 +12,14 @@ router.post("/", async(req, res) => {
     } catch (error) {
         console.log(error);
         res.status(500);
-        res.redirect("/");
+        res.redirect("/credentials?success=0");
     }
 });
 
 router.get("/", async(req, res) => {
     let credentials = await Database.get("credentials");
-    let saved = Boolean(req.query.success);
-    res.render("credentials", { credentials, saved });
+    let { success } = req.query;
+    res.render("credentials", { credentials, success });
 });
 
 module.exports = router;
