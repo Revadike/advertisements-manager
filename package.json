@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js"
+        "start": "nodemon index.js"
     },
     "author": "Revadike <https://revadike.ga>",
     "license": "MIT",
@@ -17,6 +17,9 @@
         "url": "https://github.com/revadike/advertisements-manager/issues"
     },
     "homepage": "https://github.com/revadike/advertisements-manager#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    },
     "dependencies": {
         "body-parser": "^1.19.0",
         "cheerio": "^1.0.0-rc.3",
